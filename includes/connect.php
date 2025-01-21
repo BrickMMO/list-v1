@@ -10,6 +10,7 @@ foreach($env as $value)
   define($value[0], $value[1]);
 }
 
+
 $connect = mysqli_connect(
   DB_HOST, 
   DB_USERNAME, 
