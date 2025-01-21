@@ -50,6 +50,8 @@ if(isset($_GET['list']))
     <a href="export.php?list=socials">Export Socials</a>
     <a href="export.php?list=advanced">Export Advanced</a>
 
+    <a href="logout.php">Logout</a>
+
     <?php print_r($_SESSION); ?>
 
 </body>
