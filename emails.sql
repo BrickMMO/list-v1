@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 21, 2025 at 08:53 PM
+-- Generation Time: Jan 21, 2025 at 09:02 PM
 -- Server version: 8.0.35
 -- PHP Version: 8.2.20
 
@@ -30,14 +30,14 @@ SET time_zone = "+00:00";
 CREATE TABLE `emails` (
   `id` int NOT NULL,
   `hash` varchar(255) NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'yes',
-  `socials` enum('yes','no') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'yes',
-  `advanced` enum('yes','no') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'yes',
+  `email` varchar(255) NOT NULL DEFAULT 'yes',
+  `socials` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `advanced` enum('yes','no') NOT NULL DEFAULT 'yes',
   `news` enum('yes','no') NOT NULL,
   `ip` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 
 --
 -- Indexes for dumped tables
