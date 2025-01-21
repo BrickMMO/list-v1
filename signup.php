@@ -1,6 +1,27 @@
 <?php
 
 include('includes/connect.php');
+include('includes/functions.php');
+
+if(count($_POST))
+{
+
+    $query = 'INSERT INTO emails (
+            email,
+            hash,
+            ip
+        ) VALUES (
+            "'.$_POST['email'].'",
+            "'.random_string().'",
+            "'.get_user_ip().'"
+        )';
+    mysqli_query($connect, $query);
+
+    header('Location: signup.html');
+    die();
+
+}
+
 
 ?>
 <!DOCTYPE html>
