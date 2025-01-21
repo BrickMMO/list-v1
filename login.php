@@ -3,7 +3,7 @@
 include('includes/connect.php');
 include('includes/functions.php');
 
-if(count($_POST))
+if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
     if($_POST['password'] == EXPORT_PASSWORD)

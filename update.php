@@ -15,7 +15,7 @@ if(mysqli_num_rows($result) == 0)
     die();
 }
 
-if(count($_POST))
+if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
     $query = 'UPDATE emails SET
@@ -39,35 +39,71 @@ $record = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
+    <title>Update Settings | BrickMMO</title>
+
+    <!-- W3 School CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!-- BrickMMO Exceptions -->
+    <link rel="stylesheet" href="https://cdn.brickmmo.com/exceptions@1.0.0/w3.css" />
+    <link rel="stylesheet" href="https://cdn.brickmmo.com/exceptions@1.0.0/fontawesome.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 </head>
 <body>
-    
-    <h1>Update Email Settings</h1>
 
-    <p>You are updating settings for: <?=$record['email']?>:</p>
+    <div class="w3-container w3-center" style="max-width: 400px; margin: 20px auto; font-size: 120%;">
 
-    <form method="post">
+        <a href="http://brickmmo.com">
+            <img src="images/brickmmo-logo.png" style="width: 100%; max-width: 200px;">
+        </a>
 
-        <p>News</p>
-        <input type="checkbox" name="news" value="yes" 
-            <?=($record['news'] == 'yes' ? 'checked' : '')?>
-        >
+        <hr>
 
-        <p>Socials</p>
-        <input type="checkbox" name="socials" value="yes" 
-            <?=($record['socials'] == 'yes' ? 'checked' : '')?>
-        >
+        <h1>Update Settings</h1>
 
-        <p>Advanced</p>
-        <input type="checkbox" name="advanced" value="yes" 
-            <?=($record['advanced'] == 'yes' ? 'checked' : '')?>
-        >
+        <p>
+            You are updating settings for:
+            <br>
+            <strong>
+                <?=$record['email']?>
+            </strong>
+        </p>
 
-        <input type="hidden" name="submit" value="true">
-        <input type="submit" value="Sign Up">
+        <form method="post">
 
-    </form>
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="checkbox" name="news" value="yes" 
+                    <?=($record['news'] == 'yes' ? 'checked' : '')?>
+                > News
+            </label>
+
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="checkbox" name="socials" value="yes" 
+                    <?=($record['socials'] == 'yes' ? 'checked' : '')?>
+                > Socials
+            </label>
+
+            <label style="display: block; margin-bottom: 20px;">
+                <input type="checkbox" name="advanced" value="yes" 
+                    <?=($record['advanced'] == 'yes' ? 'checked' : '')?>
+                > Advanced
+            </label>
+
+            <input type="submit" value="Sign Up" onclick="return validateForm()" style="width: 100%;">
+
+        </form>
+
+        <hr>
+
+        <div id="link">
+            <a href="https://brickmmo.com">brickmmo.com</a> | 
+            <a href="https://codeadam.ca">codeadam.ca</a>
+        </div>
+
+    </div>
 
 </body>
 </html>

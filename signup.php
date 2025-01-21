@@ -3,7 +3,7 @@
 include('includes/connect.php');
 include('includes/functions.php');
 
-if(count($_POST))
+if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
     $query = 'INSERT INTO emails (
@@ -45,7 +45,7 @@ if(count($_POST))
 </head>
 <body>
     
-    <div class="w3-container w3-center" style="max-width: 400px; margin: 20px auto;">
+    <div class="w3-container w3-center" style="max-width: 400px; margin: 20px auto; font-size: 120%;">
 
         <a href="http://brickmmo.com">
             <img src="images/brickmmo-logo.png" style="width: 100%; max-width: 200px;">
@@ -53,7 +53,7 @@ if(count($_POST))
 
         <hr>
 
-        <form method="post" style="margin-top: 20px; font-size: 120%;">
+        <form method="post" style="margin-top: 20px;">
 
             <input type="email" name="email" id="email" placeholder="email@domain.com" style="width: 100%; margin-bottom: 10px; text-align: center;">
 
