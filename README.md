@@ -1,2 +1,5 @@
-# list_v1
-A basic email newsletter list.
+# Email List Management
+
+A basic email newsletter list management tool.
+
+
