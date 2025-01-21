@@ -42,19 +42,55 @@ if(isset($_GET['list']))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Export</title>
+    <title>Export | BrickMMO</title>
+
+    <!-- W3 School CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!-- BrickMMO Exceptions -->
+    <link rel="stylesheet" href="https://cdn.brickmmo.com/exceptions@1.0.0/w3.css" />
+    <link rel="stylesheet" href="https://cdn.brickmmo.com/exceptions@1.0.0/fontawesome.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 </head>
 <body>
 
-    <h1>Export</h1>
+    <div class="w3-container w3-center" style="max-width: 400px; margin: 20px auto; font-size: 120%;">
+
+        <a href="http://brickmmo.com">
+            <img src="images/brickmmo-logo.png" style="width: 100%; max-width: 200px;">
+        </a>
+
+        <hr>
     
-    <a href="export.php?list=news">Export News</a>
-    <a href="export.php?list=socials">Export Socials</a>
-    <a href="export.php?list=advanced">Export Advanced</a>
+        <h1>Export List</h1>
+    
+        <div style="margin: 20px auto;">
+            
+            <a href="export.php?list=news">Export News</a>
+            <br>
+            <a href="export.php?list=socials">Export Socials</a>
+            <br>
+            <a href="export.php?list=advanced">Export Advanced</a>
 
-    <a href="logout.php">Logout</a>
+        </div>
 
-    <?php print_r($_SESSION); ?>
+        <div style="margin: 20px auto;">
+            
+            <a href="logout.php">Logout</a>
+
+        </div>
+
+        <hr>
+
+        <div id="link">
+            <a href="https://brickmmo.com">brickmmo.com</a> | 
+            <a href="https://codeadam.ca">codeadam.ca</a>
+        </div>
+
+    </div>
 
 </body>
 </html>

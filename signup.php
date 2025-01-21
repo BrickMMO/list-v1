@@ -6,6 +6,21 @@ include('includes/functions.php');
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
+    $query = 'SELECT *
+        FROM emails
+        WHERE email = "'.$_POST['email'].'"
+        LIMIT 1';
+    $result = mysqli_query($connect, $query);
+
+    if(mysqli_num_rows($result))
+    {
+
+        $record = mysqli_fetch_assoc($result);
+
+        header('Location: update.php?hash='.$record['hash']);
+        die();
+    }
+
     $query = 'INSERT INTO emails (
             email,
             hash,

@@ -92,7 +92,7 @@ $record = mysqli_fetch_assoc($result);
                 > Advanced
             </label>
 
-            <input type="submit" value="Sign Up" onclick="return validateForm()" style="width: 100%;">
+            <input type="submit" value="Update Settings" onclick="return validateForm()" style="width: 100%;">
 
         </form>
 

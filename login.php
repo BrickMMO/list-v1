@@ -28,23 +28,49 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login | BrickMMO</title>
+
+   <!-- W3 School CSS -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!-- BrickMMO Exceptions -->
+    <link rel="stylesheet" href="https://cdn.brickmmo.com/exceptions@1.0.0/w3.css" />
+    <link rel="stylesheet" href="https://cdn.brickmmo.com/exceptions@1.0.0/fontawesome.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 </head>
 <body>
     
-    <h1>Login</h1>
+    <div class="w3-container w3-center" style="max-width: 400px; margin: 20px auto; font-size: 120%;">
 
-    <form method="post">
+        <a href="http://brickmmo.com">
+            <img src="images/brickmmo-logo.png" style="width: 100%; max-width: 200px;">
+        </a>
 
-        Password:
-        <br>
-        <input type="password" name="password" id="password">
+        <hr>
 
-        <br>
+        <h1>Login</h1>
 
-        <input type="submit" value="Login">
+        <form method="post">
 
-    </form>
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="password" name="password" id="password" placeholder="password" style="width: 100%; margin-bottom: 10px; text-align: center;">
+            </label>
+            
+            <input type="submit" value="Sign Up" onclick="return validateForm()" style="width: 100%;">
+
+        </form>
+
+        <hr>
+
+        <div id="link">
+            <a href="https://brickmmo.com">brickmmo.com</a> | 
+            <a href="https://codeadam.ca">codeadam.ca</a>
+        </div>
+
+</div>
 
 </body>
 </html>
