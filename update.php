@@ -72,24 +72,39 @@ $record = mysqli_fetch_assoc($result);
             </strong>
         </p>
 
-        <form method="post">
+        <form method="post" style="text-align: left;">
 
             <label style="display: block; margin-bottom: 10px;">
                 <input type="checkbox" name="news" value="yes" 
                     <?=($record['news'] == 'yes' ? 'checked' : '')?>
-                > News
+                > <strong>News</strong>
+                <br>
+                <small>
+                    General updates on the Smart City project, funding, 
+                    events, and application launches.
+                </small>
             </label>
 
             <label style="display: block; margin-bottom: 10px;">
                 <input type="checkbox" name="socials" value="yes" 
                     <?=($record['socials'] == 'yes' ? 'checked' : '')?>
-                > Socials
+                > <strong>Socials</strong>
+                <br>
+                <small>
+                    Social drop-ins for anyone new to LEGO&trade; or 
+                    LEGO&trade; experts. 
+                </small>
             </label>
 
             <label style="display: block; margin-bottom: 20px;">
                 <input type="checkbox" name="advanced" value="yes" 
                     <?=($record['advanced'] == 'yes' ? 'checked' : '')?>
-                > Advanced
+                > <strong>Advanced</strong>
+                <br>
+                <small>
+                    Drop-in sessions for LEGO&trade; experts or 
+                    aspiring LEGO&trade; experts.
+                </small>
             </label>
 
             <input type="submit" value="Update Settings" onclick="return validateForm()" style="width: 100%;">
