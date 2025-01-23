@@ -17,12 +17,10 @@ if(isset($_GET['list']))
         WHERE '.$_GET['list'].' = "yes"';
     $result = mysqli_query($connect, $query);
 
-    /*
     header("Content-type: application/csv");
     header("Content-Disposition: attachment; filename=".$_GET['list'].".csv");
     header("Pragma: no-cache");
     header("Expires: 0");
-    */  
 
     echo 'id,hash,emails,socials,advanced,news,ip,created_at,updated_at'.chr(13);
 
