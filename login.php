@@ -70,7 +70,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             <a href="https://codeadam.ca">codeadam.ca</a>
         </div>
 
-</div>
+    </div>
+
+    <script src="https://cdn.brickmmo.com/bar@1.0.0/bar.js"></script>
 
 </body>
 </html>
