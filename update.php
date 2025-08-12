@@ -120,5 +120,7 @@ $record = mysqli_fetch_assoc($result);
 
     </div>
 
+    <script src="https://cdn.brickmmo.com/bar@1.0.0/bar.js"></script>
+
 </body>
 </html>
