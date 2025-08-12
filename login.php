@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                 <input type="password" name="password" id="password" placeholder="password" style="width: 100%; margin-bottom: 10px; text-align: center;">
             </label>
             
-            <input type="submit" value="Sign Up" onclick="return validateForm()" style="width: 100%;">
+            <input type="submit" value="Login" onclick="return validateForm()" style="width: 100%;">
 
         </form>
 
