@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
     
-    <div class="w3-container w3-center" style="max-width: 400px; margin: 20px auto; font-size: 120%;">
+    <div class="w3-container w3-center" style="max-width: 400px; margin: 100px auto 20px; font-size: 120%;">
 
         <a href="http://brickmmo.com">
             <img src="images/brickmmo-logo.png" style="width: 100%; max-width: 200px;">
